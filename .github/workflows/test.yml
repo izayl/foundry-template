@@ -22,11 +22,17 @@ jobs:
         with:
           version: nightly
 
+      - name: Check formatting
+        run: forge fmt --check
+
       - name: Run Forge build
         run: |
           forge --version
           forge build --sizes
         id: build
+
+      - name: Check gas snapshots
+        run: forge snapshot --check
 
       - name: Run Forge tests
         run: |
