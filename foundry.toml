@@ -4,3 +4,23 @@ out = "out"
 libs = ["lib"]
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+
+[fmt]
+line_length = 100
+tab_width = 2
+bracket_spacing = true
+
+[rpc_endpoints]
+  anvil = "http://localhost:8545"
+  mainnet = "https://cloudflare-eth.com/"
+
+  arbitrum = "https://rpc.ankr.com/arbitrum"
+  arbitrumNova = "https://rpc.ankr.com/arbitrumnova"
+  avalanche = "https://rpc.ankr.com/avalanche"
+  base = "https://base.llamarpc.com"
+  bnb = "https://binance.llamarpc.com"
+  linea = "https://linea.drpc.org"
+  optimism = "https://optimism.llamarpc.com"
+  polygon = "https://polygon.llamarpc.com"
+  scroll = "https://rpc.ankr.com/scroll"
+  zksync ="https://rpc.ankr.com/zksync_era"
