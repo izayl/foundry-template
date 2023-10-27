@@ -1,66 +1,59 @@
-## Foundry
+# foundry-template
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A template for Foundry projects.
 
-Foundry consists of:
+## 🚀 Getting Started
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+click [Use this template](https://github.com/izayl/founry-template/generate) to bootstrap your Foundry project.
 
-## Documentation
+or use command line:
 
-https://book.getfoundry.sh/
+```shell
+forge init --template izayl/foundry-template YOUR_AWESOME_PROJECT_NAME
 
-## Usage
+make install
+```
+
+## 📖 Usage
+
+### Install
+
+for the first time, you need to install the submodules:
+
+```shell
+make install
+
+# or
+
+forge install
+```
+
+if you want to add new libs, check [forge install](https://book.getfoundry.sh/reference/forge/forge-install) for more details.
 
 ### Build
 
+compile contracts:
+
 ```shell
-$ forge build
+make build
+# or
+forge build
 ```
 
 ### Test
 
-```shell
-$ forge test
-```
-
-### Format
+run tests:
 
 ```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
+make test
+# or
+forge test
 ```
 
 ### Deploy
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
+deploy contracts to Anvil:
 
 ```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+forge script script/Deploy.s.sol --broadcast --fork-url http://localhost:8545
 ```
