@@ -5,6 +5,8 @@ libs = ["lib"]
 solc = "0.8.26"
 evm_version = "cancun"
 ffi = true
+# see https://book.getfoundry.sh/cheatcodes/expect-revert#error
+allow_internal_expect_revert = true
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
 
